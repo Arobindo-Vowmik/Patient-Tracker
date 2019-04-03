@@ -44,6 +44,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(Col_4,DAA);
         contentValues.put(Col_5,D);
         contentValues.put(Col_7,C);
+
         long re = sqLiteDatabase.insert(TABLE_NAME,null,contentValues);
         if(re==-1)
             return false;
@@ -55,5 +56,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase= this.getWritableDatabase();
         Cursor res=sqLiteDatabase.rawQuery("select * from "+TABLE_NAME,null);
         return res;
+    }
+    public boolean updata_data(String PN,String TN,String EM,String DAA,String D,String C)
+    {
+        SQLiteDatabase sqLiteDatabase= this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(Col_1,PN);
+        contentValues.put(Col_2,TN);
+        contentValues.put(Col_3,EM);
+        contentValues.put(Col_4,DAA);
+        contentValues.put(Col_5,D);
+        contentValues.put(Col_7,C);
+        sqLiteDatabase.update(TABLE_NAME,contentValues,"TELIPHONE_NAME = ?",new String[] { TN });
+        return true;
     }
 }

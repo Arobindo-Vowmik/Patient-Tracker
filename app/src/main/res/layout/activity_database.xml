@@ -98,7 +98,7 @@
             android:id="@+id/Button_add"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="ADD_Data"
+            android:text="ADD_DATA"
             android:textColor="#eff5f5"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -106,7 +106,15 @@
             android:id="@+id/Button_view"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="View_ALL"
+            android:text="VIEW_ALL"
+            android:textColor="#eff5f5"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/Button_update"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="UPDATE_BUTTON"
             android:textColor="#eff5f5"
             android:textSize="20sp"
             android:textStyle="bold" />
